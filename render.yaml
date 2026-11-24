@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: halvora-voice-agent
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm run start:all
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: DEEPGRAM_API_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        sync: false
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: VAPI_PUBLIC_KEY
+        sync: false
+      - key: VAPI_SERVER_SECRET
+        generateValue: true
+      - key: INTERNAL_SECRET
+        generateValue: true
+      - key: ADMIN_TOKEN
+        generateValue: true

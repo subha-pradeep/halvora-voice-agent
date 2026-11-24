@@ -1,0 +1,36 @@
+{
+  "name": "halvora-voice-agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "agent": "node livekit-agent/agent.js dev",
+    "agent:start": "node livekit-agent/agent.js start",
+    "start:all": "node scripts/start-all.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "@livekit/agents": "^1.10.1",
+    "@livekit/agents-plugin-deepgram": "^1.10.1",
+    "@livekit/agents-plugin-google": "^1.10.1",
+    "@livekit/agents-plugin-silero": "^1.10.1",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "livekit-server-sdk": "^2.20.1",
+    "openai": "^7.63.0",
+    "ws": "^8.23.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "allowScripts": {
+    "onnxruntime-node@1.24.3": true
+  }
+}
